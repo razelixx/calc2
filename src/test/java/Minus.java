@@ -1,0 +1,6 @@
+public class Minus extends Summa{
+    protected void minus(double firstNum, double secondNum) {
+        double result = firstNum - secondNum;
+        System.out.printf("%.2f", result);
+    }
+}
