@@ -32,10 +32,10 @@ public class Main {
             default:
                 System.out.println("Операция не распознана.");
         }
-        } catch (NullPointerException e1) {
-                System.out.println("Ошибка!");
         } catch (ArithmeticException e2) {
             System.out.println("Ошибка! Деление на 0!");
+        } catch (Exception allEx) {
+            System.out.println("Ошибка!");
         }
     }
 }
