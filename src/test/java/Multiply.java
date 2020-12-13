@@ -1,6 +1,6 @@
 public class Multiply extends Summa{
-    protected void multyply(double firstNum, double secondNum) {
+    protected void multyply(int firstNum, int secondNum) {
         double result = firstNum * secondNum;
-        System.out.printf("%.2f", result);
+        System.out.print(result);
     }
 }

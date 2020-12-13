@@ -1,16 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println("Введите первое число: ");
         Scanner scanner = new Scanner(System.in);
-        double firstNum = scanner.nextDouble();
+        int firstNum = scanner.nextInt();
         System.out.println("Введите второе число: ");
-        double secondNum = scanner.nextDouble();
-        double result;
+        int secondNum = scanner.nextInt();
+        int result;
         System.out.println("Введите операцию: +, -, * или /");
         char operator = scanner.next().charAt(0);
 
+        try {
         switch (operator) {
             case '+':
                 Summa sum = new Summa();
@@ -30,6 +31,11 @@ public class Main {
                 break;
             default:
                 System.out.println("Операция не распознана.");
+        }
+        } catch (NullPointerException e1) {
+                System.out.println("Ошибка!");
+        } catch (ArithmeticException e2) {
+            System.out.println("Ошибка! Деление на 0!");
         }
     }
 }
